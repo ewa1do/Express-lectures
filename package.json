@@ -4,8 +4,7 @@
   "description": "Repo of my learning of Expressjs",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
