@@ -8,33 +8,19 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
-// Lesson 2: Middlewares
+// Lesson 4: RESTful APIs
 
-// app.use((req, res, next) => {
-//     console.log('<h1>Hello</h1>');
-//     next();
+// app.get('/:id', (req, res) => {
+//     // console.log(req.query); //?name:eduardo&age:24 <- on the browser url
+//     // req.body
+//     // console.log(req.headers);
+//     // console.log(req.params);
+//     // res.send('getting root');
+//     res.status(404).send('Not Found');
 // });
 
-// app.get ('/', (req, res) => {
-//     res.send('test');
-// });
-
-
-
-
-// // Lesson 1
-app.get('/', (req, res) => {
-    res.send('getting root');
-});
-
-app.get('/profile', (req, res) => {
-    res.send('getting profile');
-});
-
-app.post('/profile', (req, res) => {
-    console.log(req.body);
-    res.send('Success');
-});
+// Use a static folder
+app.use(express.static(`${__dirname}/public`));
 
 
 const PORT = 5000;
